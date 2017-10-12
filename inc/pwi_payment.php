@@ -28,7 +28,7 @@ class PWI_Payment extends WC_Payment_Gateway
         $this->id = 'pay_with_iota';
         $this->icon = apply_filters('woocommerce_pay_with_iota_icon', '');
         $this->has_fields = false;
-        $this->method_title = __('Pay With IOTA', 'woocommerce');
+        $this->method_title = __('Pay with IOTA', 'woocommerce');
         $this->method_description = __('Pay with IOTA. Now user can pay with IOTA', 'woocommerce');
 
 
@@ -130,8 +130,8 @@ class PWI_Payment extends WC_Payment_Gateway
     public function get_icon()
     {
         $icon_html = __('Pay with IOTA', 'woocommerce') . '<a target="_blank" href="https://paywithiota.com/">' . __('What is IOTA',
-                'woocommerce') . '</a><img src="' . plugins_url('woocommerce-pay-with-IOTA\images\iota-logo.png',
-                'woocommerce-pay-with-IOTA') . '" alt="' . esc_attr__('Pay with IOTA acceptance mark', 'woocommerce') . '" />';
+                'woocommerce') . '</a><img src="' . plugins_url('woocommerce-Pay-with-IOTA\images\iota-logo.png',
+                'woocommerce-Pay-with-IOTA') . '" alt="' . esc_attr__('Pay with IOTA acceptance mark', 'woocommerce') . '" />';
 
         return apply_filters('woocommerce_gateway_icon', $icon_html, $this->id);
     }
