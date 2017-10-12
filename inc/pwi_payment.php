@@ -58,31 +58,34 @@ class PWI_Payment extends WC_Payment_Gateway
             'enabled'         => array(
                 'title'   => __('Enable/Disable', 'woocommerce'),
                 'type'    => 'checkbox',
-                'label'   => __('Enable Custom Payment', 'woocommerce'),
+                'label'   => __('Enable Pay with IOTA', 'woocommerce'),
                 'default' => 'no',
             ),
             'api_host'        => array(
                 'title'       => __('API HOST', 'woocommerce'),
                 'type'        => 'text',
-                'description' => __('Define api host', 'woocommerce'),
+                'description' => __('Define API host for example https://paywithiota.com', 'woocommerce'),
                 'desc_tip'    => true,
+                'default' => 'https://paywithiota.com',
             ),
             'api_path'        => array(
                 'title'       => __('API PATH', 'woocommerce'),
                 'type'        => 'text',
-                'description' => __('Define api path', 'woocommerce'),
+                'description' => __('API access point', 'woocommerce'),
                 'desc_tip'    => true,
+                'default'    => 'api',
             ),
             'api_token'       => array(
                 'title'       => __('API TOKEN', 'woocommerce'),
                 'type'        => 'text',
-                'description' => __('Define api token', 'woocommerce'),
-                'desc_tip'    => true,
+                'description' => sprintf( __( '<a target="_blank" href="%s">'.__('How can I get API token','woocommerce').'</a>.', 'woocommerce' ), 'https://paywithiota.com/settings#/api' ),
             ),
+
             'ipn_verify_code' => array(
                 'title'    => __('IPN Verify Code', 'woocommerce'),
                 'type'     => 'text',
-                'desc_tip' => true,
+                'description' => __('Verify that code in IPN request', 'woocommerce'),
+                'desc_tip'    => true
             ),
 
         );
