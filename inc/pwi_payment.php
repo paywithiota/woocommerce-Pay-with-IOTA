@@ -55,35 +55,36 @@ class PWI_Payment extends WC_Payment_Gateway
     {
 
         $this->form_fields = array(
-            'enabled'         => array(
+            'enabled'   => array(
                 'title'   => __('Enable/Disable', 'woocommerce'),
                 'type'    => 'checkbox',
                 'label'   => __('Enable Pay with IOTA', 'woocommerce'),
                 'default' => 'no',
             ),
-            'api_host'        => array(
+            'api_host'  => array(
                 'title'       => __('API HOST', 'woocommerce'),
                 'type'        => 'text',
                 'description' => __('Define API host for example https://paywithiota.com', 'woocommerce'),
                 'desc_tip'    => true,
-                'default' => 'https://paywithiota.com',
+                'default'     => 'https://paywithiota.com',
             ),
-            'api_path'        => array(
+            'api_path'  => array(
                 'title'       => __('API PATH', 'woocommerce'),
                 'type'        => 'text',
                 'description' => __('API access point', 'woocommerce'),
                 'desc_tip'    => true,
-                'default'    => 'api',
+                'default'     => 'api',
             ),
-            'api_token'       => array(
+            'api_token' => array(
                 'title'       => __('API TOKEN', 'woocommerce'),
                 'type'        => 'text',
-                'description' => sprintf( __( '<a target="_blank" href="%s">'.__('How can I get API token','woocommerce').'</a>.', 'woocommerce' ), 'https://paywithiota.com/settings#/api' ),
+                'description' => sprintf(__('<a target="_blank" href="%s">' . __('How to get API Token', 'woocommerce') . '</a>.', 'woocommerce'),
+                    'https://paywithiota.com/settings#/api'),
             ),
 
             'ipn_verify_code' => array(
-                'title'    => __('IPN Verify Code', 'woocommerce'),
-                'type'     => 'text',
+                'title'       => __('IPN Verify Code', 'woocommerce'),
+                'type'        => 'text',
                 'description' => __('Verify that code in IPN request', 'woocommerce'),
                 'desc_tip'    => true
             ),
